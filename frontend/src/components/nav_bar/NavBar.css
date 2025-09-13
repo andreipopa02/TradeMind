@@ -1,0 +1,94 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+/* Navbar Icons */
+.menu-bars {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-bars {
+    color: var(--text-color);
+}
+
+.menu-bars  :hover {
+    color: var(--accent);
+}
+
+.notification-icon,
+.profile-edit-icon,
+.theme-toggle-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.theme-toggle-icon{
+    font-size: 32px;
+}
+
+/* Meniu profil */
+.profile-menu {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 250px;
+    padding: 20px;
+    background-color: var(--box-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    z-index: 999;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 16px;
+    transition: transform 0.3s ease;
+    color: var(--text-color);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+.notification-icon:hover,
+.profile-edit-icon:hover,
+.theme-toggle-icon:hover {
+    color: var(--accent);
+}

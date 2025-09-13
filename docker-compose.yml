@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks: [app_net]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: 
+      context: ./backend
+    container_name: trademind_backend
+    ports:
+      - "8000:8000"
+    restart: always
+    volumes:
+      - ./backend:/app
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [app_net]
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://${DB_USER}:${DB_PASSWORD}@db:${DB_PORT}/${DB_NAME}
+    command: [ "/bin/sh", "-c", "python3 init_db.py && uvicorn main:app --host 0.0.0.0 --port 8000 --reload" ]
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: trademind_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    networks: [app_net]
+    command: ["npm", "start"]
+    stdin_open: true
+    tty: true
+
+volumes:
+  postgres_data:
+
+networks:
+  app_net:
+    driver: bridge

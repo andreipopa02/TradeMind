@@ -1,0 +1,129 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 35%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--box-color);
+    border: 1px solid var(--ring);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+}
+
+.wide-form { max-width: 700px; }
+
+
+/* Labels */
+.form-container label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-color);
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    gap: 6px;
+}
+
+.form-container select {
+    color: var(--text-color) !important;
+    background-color: var(--box-color-alt) !important;
+}
+
+.form-container select option {
+    color: var(--text-color) !important;
+    background-color: var(--box-color) !important;
+}
+
+
+/* Inputs & selects */
+.form-container input,
+.form-container select,
+.form-container textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-top: 5px;
+    background-color: var(--box-color-alt);
+    color: var(--text-color);
+    font-size: 15px;
+    transition: border-color var(--trans), box-shadow var(--trans), background-color var(--trans);
+}
+
+.form-container textarea { min-height: 110px; resize: vertical; }
+
+.form-container input::placeholder,
+.form-container select::placeholder,
+.form-container textarea::placeholder {
+    color: var(--text-color-secondary);
+    opacity: .8;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+
+/* Field states */
+.form-container input:disabled,
+.form-container select:disabled,
+.form-container textarea:disabled {
+    opacity: .7; cursor: not-allowed;
+}
+
+
+/* actions */
+.form-button {
+    padding: 12px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    color: #051018;
+    box-shadow: 0 8px 20px rgba(108,249,230,0.18);
+    transition: transform var(--trans), box-shadow var(--trans), filter var(--trans);
+}
+.form-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px rgba(108,249,230,0.26);
+}
+
+.form-button-secondary {
+    margin: 24px auto 10px;
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--trans), color var(--trans), transform var(--trans);
+    display: block;
+    text-align: center;
+}
+.form-button-secondary:hover {
+    background-color: var(--primary);
+    color: #051018;
+    transform: translateY(-1px);
+}
+
+
+/* Messages */
+.form-error,
+.form-success {
+    font-weight: 700;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.form-error { color: #ff4c4c; }
+.form-success { color: var(--primary); }

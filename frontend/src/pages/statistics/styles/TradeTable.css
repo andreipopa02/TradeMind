@@ -1,0 +1,161 @@
+.trade-table-container {
+    background: var(--box-color);
+    color: var(--text-color);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    overflow-x: auto;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+.trade-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+
+@media (max-width: 1024px) {
+    .trade-table {
+        min-width: unset;
+    }
+}
+
+
+.trade-table th, .trade-table td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.trade-table th:hover, .trade-table td:hover {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--yellow);
+}
+
+.trade-table th {
+    background: #2a2a2a;
+    color: var(--yellow);
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.trade-table th:hover {
+    background: #444;
+}
+
+.trade-table td:last-child {
+    font-weight: bold;
+}
+
+
+.add-trade-btn {
+    background: var(--yellow);
+    color: black;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.add-trade-btn:hover {
+    background: var(--yellow);
+}
+
+.trade-table-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.trade-table-container::-webkit-scrollbar-track {
+    background: var(--box-color);
+}
+
+.trade-table-container::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 5px;
+}
+
+.trade-table-container::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.pagination-controls label {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.pagination-controls select {
+    background: var(--box-color-alt);
+    color: var(--text-color);
+    border: 1px solid #555;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.pagination-controls select:focus {
+    outline: none;
+    border-color: var(--yellow);
+}
+
+.pagination-controls .add-trade-btn {
+    margin-left: auto;
+}
+
+
+.pagination-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.pagination-nav button {
+    background-color: var(--yellow);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pagination-nav button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.total-trades {
+    color: var(--yellow);
+    font-weight: bold;
+    margin-left: 15px;
+    font-size: 14px;
+}

@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.1.0">
+  <diagram id="UsyunYWDL7rWF47HJ6be" name="Pagină-1">
+    <mxGraphModel dx="1665" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XVBHms4PMDWoI2XAChpw-1" value="" style="html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="620" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-4" value="&lt;font style=&quot;font-size: 18px;&quot; face=&quot;Comic Sans MS&quot;&gt;Frontend&lt;/font&gt;" style="html=1;whiteSpace=wrap;fillColor=#CCFFCC;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-6" value="&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Comic Sans MS&quot;&gt;Auth &amp;amp; Guarding&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="130" y="110" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-7" value="&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Comic Sans MS&quot;&gt;Trading Accounts&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="330" y="110" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-8" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px;&quot;&gt;Trades (Journal)&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="530" y="110" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-11" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px;&quot;&gt;Statistics &amp;amp; Dashboard&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="130" y="250" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-12" value="&lt;strong data-end=&quot;847&quot; data-start=&quot;833&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Comic Sans MS&quot;&gt;Strategies&lt;/font&gt;&lt;/strong&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="330" y="250" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-13" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px;&quot;&gt;Backtesting&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="530" y="250" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-14" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px;&quot;&gt;Economic Calendar&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="130" y="390" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-15" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 14px;&quot;&gt;Settings &amp;amp; Profile&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="330" y="390" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XVBHms4PMDWoI2XAChpw-16" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Help&amp;nbsp;&lt;/font&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="530" y="390" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

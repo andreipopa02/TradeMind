@@ -1,0 +1,41 @@
+.long-short-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.trade-type-card {
+    background-color: var(--box-color);
+    padding: 20px;
+    border-radius: 16px;
+    width: 240px;
+    text-align: center;
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trade-type-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.trade-type-card h4 {
+    font-size: 18px;
+    color: var(--accent-green);
+    margin-bottom: 8px;
+}
+
+.trade-type-card p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: var(--text-color-secondary);
+}
+
+.trade-type-card p strong {
+    color: var(--text-color);
+    font-weight: 600;
+}

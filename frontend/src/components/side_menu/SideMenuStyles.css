@@ -1,0 +1,108 @@
+.menu-container {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    width: 250px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: calc(100vh - 120px);
+    border-radius: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--box-color-alt);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.menu-container::-webkit-scrollbar {
+    width: 8px;
+}
+.menu-container::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 8px;
+}
+.menu-container::-webkit-scrollbar-track {
+    background: var(--box-color-alt);
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    color: var(--text-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu-item-header:hover {
+    background-color: var(--accent);
+    color: black;
+    font-weight: bold;
+}
+
+.menu-item-header:hover .icon,
+.menu-item-header:hover .label,
+.menu-item-header:hover .arrow {
+    color: black;
+}
+
+.menu-item-header .icon {
+    margin-right: 10px;
+    color: var(--text-color);
+    width: 20px;
+    text-align: center;
+}
+.menu-item-header .label {
+    flex-grow: 1;
+}
+.menu-item-header .arrow {
+    margin-left: auto;
+    color: var(--text-color-secondary);
+}
+
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+.sub-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 20px;
+    font-size: 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sub-menu-item:hover {
+    background-color: var(--accent);
+    color: black;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

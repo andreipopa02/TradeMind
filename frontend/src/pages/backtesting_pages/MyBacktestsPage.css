@@ -1,0 +1,127 @@
+.mybt-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gap);
+    margin-bottom: 26px;
+}
+
+.mybt-grid > .mybt-card {
+    grid-column: span 6;
+}
+@media (max-width: 1200px) {
+    .mybt-grid > .mybt-card { grid-column: span 12; }
+}
+
+.mybt-card {
+    position: relative;
+    background: color-mix(in srgb, var(--box-color) 88%, transparent);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 18px 18px 14px;
+    box-shadow: var(--shadow);
+    backdrop-filter: saturate(120%) blur(6px);
+    transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+    overflow: hidden;
+}
+.mybt-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+            radial-gradient(1200px 600px at -10% -20%, color-mix(in srgb, var(--primary) 16%, transparent), transparent 40%),
+            radial-gradient(900px 500px at 110% 10%, color-mix(in srgb, var(--primary-2) 12%, transparent), transparent 45%);
+    opacity: .45;
+    z-index: 0;
+}
+.mybt-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(10, 20, 60, .20), inset 0 1px 0 rgba(255,255,255,.04);
+    border-color: color-mix(in srgb, var(--primary) 28%, var(--border));
+}
+
+.mybt-card h3 {
+    position: relative;
+    z-index: 1;
+    margin: 4px 4px 14px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mybt-info-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 10px;
+}
+@media (max-width: 700px) { .mybt-info-grid { grid-template-columns: 1fr; } }
+
+.mybt-info-item {
+    display: grid;
+    gap: 6px;
+    padding: 10px;
+    border: 1px dashed color-mix(in srgb, var(--border) 76%, transparent);
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--box-color) 70%, transparent);
+}
+.mybt-info-item > span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--text-color-secondary);
+}
+.mybt-info-item > p {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.mybt-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 14px;
+}
+.mybt-actions .view-button {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 8px 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color var(--trans), color var(--trans), transform var(--trans);
+}
+.mybt-actions .view-button:hover {
+    background: var(--primary);
+    color: #051018;
+    transform: translateY(-1px);
+}
+.mybt-actions .delete-button {
+    background: transparent;
+    color: #ff7a7a;
+    border: 2px solid #ff7a7a;
+    border-radius: var(--radius);
+    padding: 8px 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color var(--trans), color var(--trans), transform var(--trans);
+}
+.mybt-actions .delete-button:hover {
+    background: #ff7a7a;
+    color: #051018;
+    transform: translateY(-1px);
+}

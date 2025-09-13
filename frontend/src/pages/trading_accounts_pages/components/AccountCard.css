@@ -1,0 +1,97 @@
+.account-info-card {
+    background: var(--box-color);
+    color: var(--text-color);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.info-grid div {
+    background: var(--box-color-alt);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.info-grid div strong {
+    color: var(--yellow);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.credentials-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--box-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.credential-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--box-color-alt);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.credential-item span {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.credential-item button {
+    background: none;
+    border: none;
+    color: var(--yellow);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.credential-item button:hover {
+    color: var(--yellow);
+}

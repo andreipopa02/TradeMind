@@ -1,0 +1,90 @@
+.help-top-menu {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.help-top-button {
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--box-color-alt);
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--trans), color var(--trans), transform var(--trans), border-color var(--trans);
+}
+.help-top-button:hover {
+    background: var(--primary);
+    color: #051018;
+    transform: translateY(-1px);
+}
+.help-top-button.active {
+    background: var(--primary);
+    color: #051018;
+}
+
+.help-content-area {
+    display: grid;
+    gap: 20px;
+}
+
+.help-article {
+    position: relative;
+    background: var(--box-color);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+}
+
+.help-article-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+.help-article-purpose {
+    color: var(--text-color-secondary);
+    margin-bottom: 12px;
+}
+
+.help-steps {
+    margin-left: 18px;
+    display: grid;
+    gap: 6px;
+    color: var(--text-color);
+}
+
+.help-tips {
+    margin-top: 12px;
+    border-top: 1px dashed var(--border);
+    padding-top: 10px;
+}
+.help-tips-title {
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+.help-related {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.help-related-label {
+    font-weight: 700;
+    color: var(--text-color);
+}
+.help-related a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px dashed color-mix(in srgb, var(--primary) 50%, transparent);
+}
+.help-related a:hover {
+    border-bottom-color: var(--primary);
+}
+
+.help-layout { display: contents; }

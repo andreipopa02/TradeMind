@@ -1,0 +1,247 @@
+.backtesting-grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(12, 1fr);
+    align-items: stretch;
+    margin-bottom: 26px;
+}
+
+.backtesting-grid > .backtest-card {
+    grid-column: span 6;
+}
+@media (max-width: 1200px) {
+    .backtesting-grid > .backtest-card {
+        grid-column: span 12;
+    }
+}
+
+/*  Card  */
+.backtest-card {
+    position: relative;
+    background: color-mix(in srgb, var(--box-color) 88%, transparent);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 18px 18px 14px;
+    box-shadow: var(--shadow);
+    backdrop-filter: saturate(120%) blur(6px);
+    transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+    overflow: hidden;
+}
+
+.backtest-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+            radial-gradient(1200px 600px at -10% -20%, color-mix(in srgb, var(--primary) 16%, transparent), transparent 40%),
+            radial-gradient(900px 500px at 110% 10%, color-mix(in srgb, var(--primary-2) 12%, transparent), transparent 45%);
+    opacity: .45;
+    z-index: 0;
+}
+
+.backtest-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(10, 20, 60, .20), inset 0 1px 0 rgba(255,255,255,.04);
+    border-color: color-mix(in srgb, var(--primary) 28%, var(--border));
+}
+
+.backtest-card h3 {
+    position: relative;
+    z-index: 1;
+    margin: 4px 4px 14px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.backtesting-grid > .backtest-metrics-card {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backtest-info-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+    margin-bottom: 10px;
+}
+@media (max-width: 900px) {
+    .backtest-info-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .backtest-info-grid { grid-template-columns: 1fr; }
+}
+
+.backtest-info-item {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 6px;
+    padding: 10px;
+    border: 1px dashed color-mix(in srgb, var(--border) 76%, transparent);
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--box-color) 70%, transparent);
+}
+
+.backtest-info-item > span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--text-color-secondary);
+}
+
+.backtest-info-item > p {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.backtest-card select {
+    color: var(--text-color) !important;
+    background-color: var(--box-color-alt) !important;
+}
+
+.backtest-card select option {
+    color: var(--text-color) !important;
+    background-color: var(--box-color) !important;
+}
+
+.backtest-card input[type="number"],
+.backtest-card input[type="date"],
+.backtest-card select {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--box-color-alt);
+    color: var(--text-color);
+    font-size: 14px;
+    transition: border-color var(--trans), box-shadow var(--trans), background-color var(--trans), transform var(--trans);
+}
+
+.backtest-card input:focus,
+.backtest-card select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+.backtest-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 14px;
+}
+
+.backtest-button {
+    position: relative;
+    z-index: 1;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    font-weight: 800;
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    color: #051018;
+    box-shadow: 0 10px 24px rgba(108,249,230,.20);
+    transition: transform var(--trans), box-shadow var(--trans), filter var(--trans);
+}
+.backtest-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(108,249,230,.28);
+}
+
+.backtest-actions .backtest-button:nth-child(n+2) {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: none;
+}
+.backtest-actions .backtest-button:nth-child(n+2):hover {
+    background: var(--primary);
+    color: #051018;
+}
+
+.chart-container {
+    width: 100%;
+    height: 420px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+    background: color-mix(in srgb, var(--box-color) 86%, transparent);
+    box-shadow: var(--shadow);
+}
+
+.backtesting-grid > .backtest-card:has(.chart-container) {
+    grid-column: 1 / -1;
+}
+
+.chart-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.chart-controls button {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 8px 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color var(--trans), color var(--trans), transform var(--trans);
+}
+.chart-controls button:hover {
+    background: var(--primary);
+    color: #051018;
+    transform: translateY(-1px);
+}
+
+
+/*  Fullscreen mode  */
+.backtest-card.fullscreen {
+    position: fixed;
+    max-width: 96%;
+    inset: 64px 12px 12px 12px;
+    z-index: 9999;
+    padding: 16px;
+    margin-top: 2%;
+    border-radius: var(--radius-xl);
+    animation: card-in var(--trans);
+}
+
+.chart-fullscreen .side-menu {
+    display: none;
+}
+
+
+@media (max-width: 900px) {
+    .backtest-card.fullscreen { inset: 64px 12px 12px 12px; }
+}
+.backtest-card.fullscreen .chart-container {
+    height: calc(100vh - 140px);
+}
+
+@keyframes card-in {
+    from { transform: translateY(6px); opacity: .0; }
+    to   { transform: translateY(0);   opacity: 1;  }
+}
+
+.page-title {
+    margin-top: 4px;
+    margin-bottom: 24px;
+}

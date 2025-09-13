@@ -1,0 +1,25 @@
+.change-password-button {
+    margin: 30px auto 10px auto;
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.change-password-button:hover {
+    background-color: var(--accent);
+    color: black;
+
+}
+
+.change-pswd-container {
+    width: 35%;
+}
+

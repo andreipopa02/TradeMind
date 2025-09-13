@@ -1,0 +1,21 @@
+.stat-explanation-box {
+    background-color: var(--box-color);
+    color: var(--text-color);
+    padding: 16px 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    font-size: 14px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.stat-explanation-box h3 {
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.stat-explanation-box p {
+    color: var(--text-color);
+}

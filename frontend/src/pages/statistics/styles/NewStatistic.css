@@ -1,0 +1,28 @@
+.volume-range {
+    display: flex;
+    gap: 10px;
+}
+
+.volume-range input {
+    flex: 1;
+}
+
+.form-container select {
+    background-color: var(--box-color-alt);
+    color: var(--text-color);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 10px;
+    transition: border-color var(--trans);
+}
+
+.form-container select:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.form-container select option {
+    background-color: var(--box-color);
+    color: var(--text-color);
+}
+

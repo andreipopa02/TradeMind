@@ -1,0 +1,48 @@
+.calendar-selector,
+.filter-options {
+    margin-bottom: 20px;
+}
+
+.calendar-selector label,
+.filter-options label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--text-color);
+}
+
+.calendar-selector select,
+.filter-options select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background: var(--box-color-alt);
+    color: var(--text-color);
+}
+
+.calendar-iframe-container {
+    width: 100%;
+    height: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.economic-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: var(--box-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+}

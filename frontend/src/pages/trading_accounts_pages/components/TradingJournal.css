@@ -1,0 +1,99 @@
+.trading-journal {
+    width: 100%;
+    margin: 20px auto 30px auto;
+    background: var(--box-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.trading-journal table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trading-journal th,
+.trading-journal td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.trading-journal th {
+    background: var(--box-color-alt);
+    color: var(--yellow);
+}
+
+.trading-journal td {
+    color: var(--text-color-secondary);
+}
+
+.trading-journal td:last-child {
+    font-weight: bold;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.pagination-controls label {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.pagination-controls select {
+    background: var(--box-color-alt);
+    color: var(--text-color);
+    border: 1px solid #555;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.pagination-controls select:focus {
+    outline: none;
+    border-color: var(--yellow);
+}
+
+.pagination-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.pagination-nav button {
+    background-color: var(--yellow);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pagination-nav button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.total-trades {
+    color: var(--yellow);
+    font-weight: bold;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
